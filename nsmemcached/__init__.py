@@ -2,7 +2,7 @@
 
 import memcache
 
-from client import NamespacedClient
+from .client import NamespacedClient
 
 VERSION = (0, 2, 1)
 __version__ = '.'.join([str(x) for x in VERSION])

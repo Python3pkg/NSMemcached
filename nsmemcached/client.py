@@ -121,7 +121,7 @@ class NamespacedClient(object):
     def _compute_key(self, key, ns=None):
         """ Computes key name, depending if it's tied to a namespace.
         """
-        if not isinstance(key, basestring):
+        if not isinstance(key, str):
             raise NotImplementedError('nsmemcached only handles string keys')
         if ns:
             key = '%s_%d_%s' % (ns, self.get_ns_key(ns), str(key),)
@@ -130,6 +130,6 @@ class NamespacedClient(object):
     def _compute_ns_key(self, ns):
         """ Computes a namespace key name.
         """
-        if not isinstance(ns, basestring):
+        if not isinstance(ns, str):
             raise NotImplementedError('nsmemcached only handles string ns')
         return str('%s_ns_key' % ns)

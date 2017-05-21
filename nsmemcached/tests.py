@@ -2,7 +2,7 @@
 
 import unittest
 
-from __init__ import Client
+from .__init__ import Client
 
 
 class CacheTest(unittest.TestCase):
